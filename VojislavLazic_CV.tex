@@ -1,14 +1,6 @@
 %xelatex
-%% start of file `template.tex'.
-%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
 
 \documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-
 
 % modern themes
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -41,7 +33,7 @@
 \usepackage[none]{hyphenat}
 \usepackage{setspace}
 
-\onehalfspace
+\linespread{1.15}
 
 % personal data
 \name{Vojislav}{Lazić}
@@ -136,22 +128,36 @@
 %{\customcventry{}{Participated in a team of 4, placed 3rd}{Tesla Info Kup - national competition in informatics for grade schoolers}{2015}{}{}}
 
 \section{Experience}
-{\customcventry{}{Junior DevOps Engineer}{TeleTrader}{Jun 2024 - }{}{}}
-{\customcventry{}{Junior DevOps Engineer}{Grid Dynamics}{Mar 2023 - Aug 2023}{}{}}
+{\customcventry{}{Junior DevOps Engineer}{TeleTrader}{Jun 2024 - }{}{
+	\begin{itemize}[noitemsep,itemindent=0em]
+        \item[$\cdot$] Kubernetes cluster deployment, upgrading and maintenance
+        \item[$\cdot$] Monitoring with Grafana and Prometheus
+        \item[$\cdot$] Storage with Rook Ceph
+        \item[$\cdot$] Networking with Istio
+        \item[$\cdot$] Designed GitOps system, deployment with ArgoCD
+    \end{itemize}
+    }}
+{\customcventry{}{Junior DevOps Engineer}{Grid Dynamics}{Mar 2023 - Aug 2023}{}{
+	\begin{itemize}[noitemsep,itemindent=0em]
+        \item[$\cdot$] Migrating services and infrastructure to Google Cloud, deployment with Terraform
+        \item[$\cdot$] CI/CD using Github Actions
+    \end{itemize}
+    }}
 {\customcventry{}{DevOps Engineer Intern}{Grid Dynamics}{Sep 2022 - Mar 2023}{}{}}
 
 
 \section{Projects}
 \begin{itemize}[topsep=0em, itemsep=0pt, itemindent=-1em,font=\huge]
-	\item[] \textbf{Kinoteka Kalendar}
-		\begin{itemize}[noitemsep,itemindent=-1.25em,topsep=0pt]
-			\item[] Web app for parsing and displaying the \href{http://kinoteka.org.rs}{Yugoslav film archive} monthly program, written in Python (Flask).
-			\item[] \faGithub \href{https://github.com/vojislav/kinoteka-kalendar}{ kinoteka-kalendar}
-	 	\end{itemize}
 	\item[] \textbf{Terminal Music Player}
 		\begin{itemize}[noitemsep,itemindent=-1.25em,topsep=0pt]
 			\item[] Text-based music player for \href{http://www.subsonic.org}{Subsonic} servers, written in Go.
 			\item[] \faGithub \href{https://github.com/vojislav/music-player-go/}{ music-player-go}
+	 	\end{itemize}
+
+	\item[] \textbf{Kinoteka Kalendar}
+		\begin{itemize}[noitemsep,itemindent=-1.25em,topsep=0pt]
+			\item[] Web app for parsing and displaying the \href{http://kinoteka.org.rs}{Yugoslav film archive} monthly program, written in Python (Flask).
+			\item[] \faGithub \href{https://github.com/vojislav/kinoteka-kalendar}{ kinoteka-kalendar} \faGlobe \href{https://kinoteka.lazic.xyz}{ website}
 	 	\end{itemize}
 
 	 \item[] \textbf{NASA Picture of the Day cloud application}
@@ -172,16 +178,7 @@
 
 \textbf{Software:} Git, Docker, Kubernetes, Helm, Terraform, Ansible, Jenkins, Grafana, ArgoCD
 
-\textbf{Cloud}: AWS, Google Cloud
-
-\textbf{Operating systems:} GNU/Linux, Windows, MacOS, Android, iOS
-
-\textbf{Other skills:} Linux command line utilities, system administration
-
 \section{Languages}
 	\textbf{English} (Fluent), \textbf{Serbian} (Native speaker)
 
 \end{document}
-
-
-%% end of file `template.tex'.
